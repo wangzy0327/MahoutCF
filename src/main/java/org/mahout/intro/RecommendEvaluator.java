@@ -1,4 +1,4 @@
-package org.mahout;
+package org.mahout.intro;
 
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.eval.RecommenderBuilder;
@@ -26,7 +26,6 @@ public class RecommendEvaluator {
             RecommenderEvaluator evaluator = new AverageAbsoluteDifferenceRecommenderEvaluator();
 
 //            RecommenderEvaluator evaluator = new RMSRecommenderEvaluator();
-
 
 
 //            RecommenderBuilder builder = new RecommenderBuilder() {
