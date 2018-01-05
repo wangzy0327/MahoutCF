@@ -1,4 +1,4 @@
-package org.mahout;
+package org.mahout.intro;
 
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;

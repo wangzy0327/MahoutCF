@@ -1,4 +1,4 @@
-package org.mahout;
+package org.mahout.intro;
 
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.eval.IRStatistics;
@@ -29,12 +29,12 @@ public class RecommendPrecision {
             RecommenderBuilder recommenderBuilder = new RecommenderBuilder() {
                 public Recommender buildRecommender(DataModel dataModel) throws TasteException {
                     UserSimilarity similarity = new PearsonCorrelationSimilarity(dataModel);
-                    UserNeighborhood neighborhood = new NearestNUserNeighborhood(2,similarity,dataModel);
-                    return new GenericUserBasedRecommender(dataModel,neighborhood,similarity);
+                    UserNeighborhood neighborhood = new NearestNUserNeighborhood(2, similarity, dataModel);
+                    return new GenericUserBasedRecommender(dataModel, neighborhood, similarity);
                 }
             };
-            IRStatistics stats = evaluator.evaluate(recommenderBuilder,null,model,
-                    null,2,GenericRecommenderIRStatsEvaluator.CHOOSE_THRESHOLD,1.0);
+            IRStatistics stats = evaluator.evaluate(recommenderBuilder, null, model,
+                    null, 2, GenericRecommenderIRStatsEvaluator.CHOOSE_THRESHOLD, 1.0);
             System.out.println(stats.getPrecision());
             System.out.println(stats.getRecall());
         } catch (IOException e) {
