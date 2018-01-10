@@ -15,7 +15,7 @@ import org.apache.mahout.cf.taste.similarity.precompute.example.GroupLensDataMod
 import java.io.File;
 import java.io.IOException;
 
-public class ItemNeighborRecommendEvaluator {
+public class ItemRecommendEvaluator {
     public static void main(String[] args) {
         try {
             DataModel model = new GroupLensDataModel(new File("ratings.dat"));
